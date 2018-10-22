@@ -56,22 +56,3 @@ class AM2320
   end
 end
 
-# process start
-sensor = AM2320.new('/dev/i2c-1')
-
-tempAry = []
-# 処理を終えるかどうかフラグで管理する
-reloopFlg = true
-while reloopFlg do
-  temp = sensor.read
-  if temp != nil
-    tempAry << temp
-    if tempAry.size == 5
-      reloopFlg = false
-    else
-      sleep(1)
-    end
-  end
-end
-
-targetTempature = sensor.tempature_standard_deviation(tempAry)
