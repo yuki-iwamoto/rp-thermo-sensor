@@ -63,7 +63,7 @@ else
 end
 
 #Google spreadsheet
-sheet_id = "1bmR08oGhP01-DOLhlvuF_foJGIQEguXwL9-pD6R38ho"
+sheet_id = "1bmRa08aoGhP01-DOLahlvauF_foJGaIQaEguXwL9-pDa6Ra38ho"
 json_file = "/home/pi/Test temperature Server room-c61a8093e3eb.json"
 
 options = JSON.parse(File.read(json_file))
