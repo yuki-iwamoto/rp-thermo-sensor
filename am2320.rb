@@ -9,20 +9,20 @@ class AM2320
     @address = address
   end
 
-	def tempature_standard_deviation(tempAry)
-		actualDiffTempature = 2.6;
-		#average tempature
-		sumTempature = tempAry.inject(0){|result, n|result + n}
-		averageTempature = if tempAry.size
-			sumTempature / tempAry.size
-		else
-			actualDiffTempature
-		end
-		# TODO func henkan
-		#targetTempature= averageTempature - actualDiffTempature
-		targetTempature = averageTempature
-		return targetTempature.round(1)
+  def tempature_standard_deviation(tempAry)
+	actualDiffTempature = 2.6;
+	#average tempature
+	sumTempature = tempAry.inject(0){|result, n|result + n}
+	averageTempature = if tempAry.size
+		sumTempature / tempAry.size
+	else
+		actualDiffTempature
 	end
+	# TODO func henkan
+	#targetTempature= averageTempature - actualDiffTempature
+	targetTempature = averageTempature
+	return targetTempature.round(1)
+  end
 
   def read
     #センサーを付ける
