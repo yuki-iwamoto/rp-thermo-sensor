@@ -10,7 +10,7 @@ class AM2320
   end
 
   def tempature_standard_deviation(tempAry)
-	actualDiffTempature = 2.6;
+	actualDiffTempature = 1.62;
 	#average tempature
 	sumTempature = tempAry.inject(0){|result, n|result + n}
 	averageTempature = if tempAry.size
@@ -18,9 +18,9 @@ class AM2320
 	else
 		actualDiffTempature
 	end
-	# TODO func henkan
-	#targetTempature= averageTempature - actualDiffTempature
-	targetTempature = averageTempature
+	# 実際の温度計との差を埋める処理
+	targetTempature= averageTempature - actualDiffTempature
+	#targetTempature = averageTempature
 	return targetTempature.round(1)
   end
 
